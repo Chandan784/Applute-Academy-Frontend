@@ -4,6 +4,8 @@ import { courses } from "../../Coursedata.js";
 
 export default function CourseDetails() {
   const { id } = useParams();
+  console.log(id, "id");
+
   const course = courses.find((c) => c.id === id);
   const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
