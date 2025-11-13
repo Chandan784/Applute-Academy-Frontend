@@ -9,10 +9,8 @@ export default function Navbar() {
   // Update links with route paths
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Why Us", path: "/whyus" },
     { name: "Courses", path: "/courses" },
     { name: "About", path: "/about" },
-    { name: "Feedback", path: "/feedback" },
     { name: "Contact", path: "/contact" },
     { name: "Quiz", path: "/quiz" },
   ];
