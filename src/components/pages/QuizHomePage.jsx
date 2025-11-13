@@ -13,8 +13,8 @@ const QuizPage = () => {
   // Filter subjects by search
   const filteredSubjects = quizData.filter((subject) =>
     subject.subjectName.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+);
+ 
   const startQuiz = (subject) => {
     setSelectedSubject(subject);
     setCurrentQ(0);

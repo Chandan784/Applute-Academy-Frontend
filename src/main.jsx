@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import "./index.css";
+import QuizPage from "./components/pages/QuizHomePage";
 import Courses from "./components/Courses";
 import HomePage from "./components/pages/HomePage";
 import Contact from "./components/Contact";
@@ -30,6 +31,10 @@ let routes = createBrowserRouter([
         path: "/course/:id", //dynamic routes define
         element: <CourseDetails />,
       },
+      {
+        path:"/quizes",
+        element: <QuizPage/>
+      }
     ],
   },
   ,
