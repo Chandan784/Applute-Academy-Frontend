@@ -7,11 +7,12 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import "./index.css";
-import QuizPage from "./components/pages/QuizHomePage";
+import QuizHomePage from "./components/pages/quiz/QuizHomePage";
 import Courses from "./components/Courses";
 import HomePage from "./components/pages/HomePage";
 import Contact from "./components/Contact";
 import CourseDetails from "./components/pages/CourseDetails";
+import About from "./components/About";
 
 let routes = createBrowserRouter([
   {
@@ -33,7 +34,15 @@ let routes = createBrowserRouter([
       },
       {
         path:"/quizes",
-        element: <QuizPage/>
+        element: <QuizHomePage/>
+      },
+      {
+        path:"/contact",
+        element: <Contact/>
+      },
+      {
+        path:"about",
+        element:<About/>
       }
     ],
   },
