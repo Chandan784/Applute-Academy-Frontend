@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { courses } from "../Coursedata.js";
 import { FaClock, FaRupeeSign } from "react-icons/fa";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default function Courses() {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ export default function Courses() {
       id="courses"
       className="py-20 px-6 bg-gradient-to-b from-[#e8f0ff] via-white to-[#f5f8ff]"
     >
+      <ScrollToTop/>
       <div className="text-center mb-14">
         <h2 className="text-4xl font-extrabold text-[#0043ce] tracking-wide drop-shadow-sm">
           Our Courses
