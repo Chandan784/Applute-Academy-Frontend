@@ -409,7 +409,7 @@ export const courses = [
     description:
       "Learn how to style and design beautiful, responsive websites with modern CSS techniques.",
     img: "https://wallpaperaccess.com/full/2987572.jpg",
-    price: "₹1,999",
+    price: "₹999",
     duration: "15 days",
     demoVideo: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     syllabus: [
