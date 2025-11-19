@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { quizData } from "../../../data/quizData";
-import QuizSubjectCard from "../../quiz/QuizSubjectCard"
+import QuizSubjectCard from "../QuizSubjectCard";
 import QuizQuestionView from "./QuizQuestionView";
 import QuizResultPage from "./QuizResultPage";
 
