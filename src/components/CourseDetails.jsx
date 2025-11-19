@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { courses } from "../../Coursedata.js";
+import { courses } from "../Coursedata.js";
+import Certificate from "./Certifiacte.jsx";
 
 export default function CourseDetails() {
   const { id } = useParams();
@@ -54,7 +55,7 @@ Please share more details about this course.
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b mt-4 from-blue-50 to-white text-gray-900 pb-24">
+    <div className="relative min-h-screen bg-gradient-to-b from-blue-50 to-white text-gray-900 pb-24 pt-28 md:pt-24 lg:pt-20">
       <div className="max-w-5xl mx-auto px-4 md:px-8 py-8 md:py-12">
         {/* Course Title */}
         <h1 className="text-3xl md:text-5xl font-extrabold mb-3 text-center text-[#0033A0] leading-tight">
@@ -132,8 +133,11 @@ Please share more details about this course.
             <li>✅ Certification After Completion</li>
           </ul>
         </div>
+        <div>
+          <Certificate/> {/* Certification Section */}
       </div>
-
+      </div>
+      
       {/* Fixed Button */}
       <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-4 shadow-xl z-50">
         <div className="text-center">

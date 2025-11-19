@@ -9,9 +9,9 @@ import App from "./App";
 import "./index.css";
 import QuizHomePage from "./components/pages/quiz/QuizHomePage";
 import Courses from "./components/Courses";
-import HomePage from "./components/pages/HomePage";
+import HomePage from "./components/HomePage"
 import Contact from "./components/Contact";
-import CourseDetails from "./components/pages/CourseDetails";
+import CourseDetails from "./components/CourseDetails";
 import About from "./components/About";
 
 let routes = createBrowserRouter([
