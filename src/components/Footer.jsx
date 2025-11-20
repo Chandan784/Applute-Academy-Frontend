@@ -13,15 +13,34 @@ export default function Footer() {
       <p className="text-gray-400 text-sm">
         © {new Date().getFullYear()} Applute Academy. All rights reserved.
       </p>
+
       <p className="font-semibold mt-2 text-sm text-gradient-blue">
         Learn • Build • Grow
       </p>
+
       <p className="text-gray-500 mt-2 text-xs">
         A product of{" "}
         <span className="font-semibold text-white">
           Applute Technologies Private Limited
         </span>
       </p>
+
+      {/* Legal Links */}
+      <div className="flex justify-center gap-6 mt-4 text-sm">
+        <a
+          href="/terms-and-conditions"
+          className="hover:text-gradient-blue transition-colors duration-300"
+        >
+          Terms & Conditions
+        </a>
+
+        <a
+          href="/privacy-policy"
+          className="hover:text-gradient-blue transition-colors duration-300"
+        >
+          Privacy Policy
+        </a>
+      </div>
 
       {/* Social Icons */}
       <div className="flex justify-center gap-4 mt-4">
