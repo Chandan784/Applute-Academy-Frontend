@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { courses } from "../Coursedata.js";
 import Certificate from "./Certifiacte.jsx";
+import WhoIsThisFor from "./WhoIsThisFor.jsx";
+
+import FAQ from "./FAQ.jsx";
 
 export default function CourseDetails() {
   const { id } = useParams();
@@ -134,10 +137,16 @@ Please share more details about this course.
           </ul>
         </div>
         <div>
-          <Certificate/> {/* Certification Section */}
+          <Certificate /> {/* Certification Section */}
+        </div>
+        <div>
+          <WhoIsThisFor />
+        </div>
+        <div>
+          <FAQ />
+        </div>
       </div>
-      </div>
-      
+
       {/* Fixed Button */}
       <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-4 shadow-xl z-50">
         <div className="text-center">
