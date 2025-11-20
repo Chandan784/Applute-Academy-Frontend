@@ -9,10 +9,12 @@ import App from "./App";
 import "./index.css";
 import QuizHomePage from "./components/pages/quiz/QuizHomePage";
 import Courses from "./components/Courses";
-import HomePage from "./components/HomePage"
+import HomePage from "./components/HomePage";
 import Contact from "./components/Contact";
 import CourseDetails from "./components/CourseDetails";
 import About from "./components/About";
+import TermsAndConditionsApplute from "./components/pages/term-condition/TermCondition";
+import PrivacyPolicy from "./components/pages/term-condition/PrivacyPolicy";
 
 let routes = createBrowserRouter([
   {
@@ -33,22 +35,30 @@ let routes = createBrowserRouter([
         element: <CourseDetails />,
       },
       {
-        path:"/quizes",
-        element: <QuizHomePage/>
+        path: "/quizes",
+        element: <QuizHomePage />,
       },
       {
-        path:"/contact",
-        element: <Contact/>
+        path: "/contact",
+        element: <Contact />,
       },
       {
-        path:"about",
-        element:<About/>
-      }
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/terms-and-conditions",
+        element: <TermsAndConditionsApplute />,
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy />,
+      },
     ],
   },
   ,
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-<RouterProvider router={routes} />
+  <RouterProvider router={routes} />
 );
