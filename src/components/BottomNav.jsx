@@ -19,8 +19,8 @@ export default function BottomNav() {
   const [active, setActive] = useState(1);
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full flex justify-center">
-      <div className="bg-white shadow-xl h-20 w-[92%] max-w-md rounded-2xl flex items-center relative px-4 overflow-hidden">
+    <div className="fixed bottom-0   bg-sky-100   left-1/2 -translate-x-1/2 z-50 w-full flex justify-center">
+      <div className="bg-white shadow-xl h-20 w-full max-w-md  flex items-center relative overflow-hidden">
         <div className="flex justify-between w-full relative">
           {tabs.map((tab) => {
             const Icon = tab.icon;
@@ -52,8 +52,8 @@ export default function BottomNav() {
                 <motion.span
                   className="text-xs mt-1 font-medium"
                   animate={{
-                    opacity: isActive ? 1 : 0,
-                    y: isActive ? 0 : 4,
+                    opacity: isActive ? 1 : 1,
+                    y: isActive ? 1 : 4,
                   }}
                   transition={{ duration: 0.25 }}
                   style={{

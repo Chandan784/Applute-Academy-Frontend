@@ -9,14 +9,11 @@ export default function Courses() {
   //jhjg
 
   return (
-    <section
-      id="courses"
-      className="py-20 px-6 bg-gradient-to-b from-[#e8f0ff] via-white to-[#f5f8ff]"
-    >
-      <ScrollToTop/>
+    <section id="courses" className="py-20 px-6 bg-gradient-to-b ">
+      <ScrollToTop />
       <div className="text-center mb-14">
         <h2 className="text-4xl font-extrabold text-[#0043ce] tracking-wide drop-shadow-sm">
-          Our Courses
+          Courses
         </h2>
         <p className="text-gray-700 mt-3 max-w-2xl mx-auto text-lg">
           Learn with Applute Academy’s industry experts and boost your tech
@@ -28,7 +25,7 @@ export default function Courses() {
         {courses.map((c, index) => (
           <div
             key={c.id}
-            className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-500 border border-[#cdd9ff] flex flex-col"
+            className="bg-white  shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-500 border border-[#cdd9ff] flex flex-col"
             style={{
               animation: `fadeInUp 0.8s ease forwards`,
               animationDelay: `${index * 0.2}s`,
@@ -36,26 +33,24 @@ export default function Courses() {
             }}
           >
             {/* Image Section */}
-            <div className="overflow-hidden rounded-t-3xl">
+            <div className="overflow-hidden ">
               <img
                 src={c.img}
                 alt={c.name}
-                className="h-56 w-full object-cover transition-transform duration-500 hover:scale-110"
+                className="  h-40 w-full object-cover transition-transform duration-500 hover:scale-110"
               />
             </div>
 
             {/* Content Section */}
             <div className="p-6 flex flex-col flex-grow justify-between">
               <div>
-                <h3 className="text-2xl font-bold text-[#002b7f] mb-3">
-                  {c.name}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <h3 className=" font-bold text-[#002b7f] mb-3">{c.name}</h3>
+                {/* <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   {c.description}
-                </p>
+                </p> */}
 
                 {/* Duration & Price */}
-                <div className="flex justify-between items-center mb-4 text-gray-700 font-semibold text-sm sm:text-base">
+                <div className="flex justify-between items-center mb-2 text-gray-700 font-semibold text-sm sm:text-base">
                   <div className="flex items-center gap-1">
                     <FaClock className="text-[#0043ce]" />
                     <span>{c.duration}</span>
@@ -68,10 +63,10 @@ export default function Courses() {
               </div>
 
               {/* Details Button */}
-              <div className="text-center mt-3">
+              <div className="text-center mt-1">
                 <button
                   onClick={() => navigate(`/course/${c.id}`)}
-                  className="bg-gradient-to-r from-[#0043ce] to-[#007bff] text-white px-6 py-2 rounded-xl font-semibold shadow-lg hover:from-[#003bb0] hover:to-[#0060e0] transition-all duration-300 w-full sm:w-auto"
+                  className="bg-gradient-to-r from-[#0043ce] to-[#007bff] text-white px-6 py-2 rounded-xl  text-sm font-semibold shadow-lg hover:from-[#003bb0] hover:to-[#0060e0] transition-all duration-300 w-full sm:w-auto"
                 >
                   Details
                 </button>

@@ -1,7 +1,7 @@
 export default function WhoIsThisFor() {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto lg:px-6">
         <h2 className="text-3xl font-bold text-center text-blue-600 mb-12">
           Who Is This Course For?
         </h2>
