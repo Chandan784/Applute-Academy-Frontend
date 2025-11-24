@@ -15,6 +15,7 @@ import CourseDetails from "./components/CourseDetails";
 import About from "./components/About";
 import TermsAndConditionsApplute from "./components/pages/term-condition/TermCondition";
 import PrivacyPolicy from "./components/pages/term-condition/PrivacyPolicy";
+import BlogHome from "./components/pages/blog/BlogHomePage";
 
 let routes = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ let routes = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/blog",
+        element: <BlogHome />,
       },
       {
         path: "/about",
