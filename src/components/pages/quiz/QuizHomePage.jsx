@@ -4,7 +4,6 @@ import QuizSubjectCard from "../QuizSubjectCard";
 import QuizQuestionView from "./QuizQuestionView";
 import QuizResultPage from "./QuizResultPage";
 
-
 const QuizPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedSubject, setSelectedSubject] = useState(null);
@@ -17,8 +16,8 @@ const QuizPage = () => {
   // Filter subjects by search
   const filteredSubjects = quizData.filter((subject) =>
     subject.subjectName.toLowerCase().includes(searchTerm.toLowerCase())
-);
- 
+  );
+
   const startQuiz = (subject) => {
     setSelectedSubject(subject);
     setCurrentQ(0);
@@ -58,60 +57,74 @@ const QuizPage = () => {
     }
   };
 
- // 🟦 SUBJECT SELECTION VIEW
-if (!selectedSubject) {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-100 to-blue-50 py-12 mt-20">
-      <div className="max-w-5xl mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-4">
-          🧠 Applute Quiz Arena
-        </h1>
-        <p className="text-gray-600 text-lg mb-8">
-          Choose a subject and test your knowledge instantly!
-        </p>
+  // 🟦 SUBJECT SELECTION VIEW
+  if (!selectedSubject) {
+    return (
+      <div className="min-h-screen  mt-16 lg:py-12 lg:mt-20">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className=" sm:text-2xl font-extrabold text-gray-800 mb-4">
+            Applute Academy Quiz
+          </h1>
+          <p className="text-gray-600  mb-8">
+            Choose a subject and test your knowledge instantly!
+          </p>
 
-        <div className="flex justify-center mb-10">
-          <input
-            type="text"
-            placeholder="🔍 Search subject..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="border rounded-2xl p-4 w-full sm:w-1/2 shadow-md focus:ring-2 focus:ring-blue-400 outline-none"
-          />
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredSubjects.map((subject) => (
-            <QuizSubjectCard
-              key={subject.subjectName}
-              subject={subject}
-              startQuiz={startQuiz}
+          <div className="flex justify-center mb-10">
+            <input
+              type="text"
+              placeholder="🔍 Search subject..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="border rounded-2xl p-2 lg:p-4 w-full sm:w-1/2 shadow-md focus:ring-2 focus:ring-blue-400 outline-none"
             />
-          ))}
+          </div>
 
-          {filteredSubjects.length === 0 && (
-            <p className="col-span-full text-gray-500">No subjects found.</p>
-          )}
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-8">
+            {filteredSubjects.map((subject) => (
+              <QuizSubjectCard
+                key={subject.subjectName}
+                subject={subject}
+                startQuiz={startQuiz}
+              />
+            ))}
+
+            {filteredSubjects.length === 0 && (
+              <p className="col-span-full text-gray-500">No subjects found.</p>
+            )}
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
-
+    );
+  }
 
   const q = selectedSubject.questions[currentQ];
 
   // 🟩 RESULT PAGE
   if (showResult) {
     return (
-   <QuizResultPage selectedSubject={selectedSubject} score={score} answers={answers} startQuiz={startQuiz} setSearchTerm={setSearchTerm} setSelectedSubject={setSelectedSubject} />
+      <QuizResultPage
+        selectedSubject={selectedSubject}
+        score={score}
+        answers={answers}
+        startQuiz={startQuiz}
+        setSearchTerm={setSearchTerm}
+        setSelectedSubject={setSelectedSubject}
+      />
     );
   }
 
   // 🟨 QUIZ QUESTIONS VIEW
   return (
-    <QuizQuestionView selectedSubject={selectedSubject} q={q} currentQ={currentQ} selected={selected} setSearchTerm={setSearchTerm} setSelectedSubject={setSelectedSubject} handleAnswer={handleAnswer} nextQuestion={nextQuestion}/>
-
+    <QuizQuestionView
+      selectedSubject={selectedSubject}
+      q={q}
+      currentQ={currentQ}
+      selected={selected}
+      setSearchTerm={setSearchTerm}
+      setSelectedSubject={setSelectedSubject}
+      handleAnswer={handleAnswer}
+      nextQuestion={nextQuestion}
+    />
   );
 };
 

@@ -31,9 +31,9 @@ export default function WhyUs() {
   return (
     <section
       id="whyus"
-      className="py-20 px-6 text-center bg-gradient-to-b from-[#F3F7FF] to-white"
+      className="py-4 lg:py-20 px-6 text-center bg-gradient-to-b from-[#F3F7FF] to-white"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-[#0033A0]">
+      <h2 className=" text-sm lg:text-2xl md:text-2xl font-bold text-[#0033A0]">
         Why We Are Better
       </h2>
       <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -43,20 +43,20 @@ export default function WhyUs() {
         <span className="font-semibold">industry-ready</span> from day one.
       </p>
 
-      <div className="mt-12 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="mt-12 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-6 max-w-6xl mx-auto">
         {features.map((item, i) => (
           <div
             key={i}
-            className="bg-white rounded-3xl shadow-md p-4 sm:p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center"
+            className="bg-white rounded-xl shadow-md p-4 sm:p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center"
           >
-            <div className="w-full h-40 rounded-2xl overflow-hidden mb-4">
+            <div className="w-full  h-24 lg:h-40 rounded-2xl overflow-hidden mb-4">
               <img
                 src={item.img}
                 alt={item.title}
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-base sm:text-lg font-semibold text-[#0033A0]">
+            <h3 className=" text-sm font-semibold text-[#0033A0]">
               {item.title}
             </h3>
           </div>
